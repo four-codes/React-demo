@@ -46,18 +46,29 @@ router.post('/new', function(req, res, next) {
 
 
 router.get('/users', function(req, res, next) {
-    res.locals.connection.query('SELECT firstname,username,city,state,zip FROM register', (error, results, fields) => {
+    res.locals.connection.query('SELECT id,firstname,lastname,username,city,state,zip FROM register', (error, results, fields) => {
         if(error) throw error;
         res.json(results);
     });
 });
 
 
-router.get('/edit', function(req, res, next) {
-    res.locals.connection.query(`update members set name = '${req.body.name}', email = '${req.body.bloodGroup}' where id = '${req.body.id}')`, (error, results, fields)  => {
+router.get('/:id', function(req, res, next) {
+    res.locals.connection.query(`SELECT id,firstname,lastname,username,city,state,zip FROM register where id = ${req.params.id}`, (error, results, fields)  => {
         if(error) throw error;
-        res.send(JSON.stringify(results));
+        console.log(results[0]);
+        res.json(results[0]);
     });
 });
+
+
+router.post('/update', function(req, res, next) {
+    res.locals.connection.query(`UPDATE register SET firstname='${req.body.FirstName}',lastname='${req.body.LastName}',username='${req.body.Username}',city='${req.body.City}',state='${req.body.State}',zip='${req.body.Zip}' where id = ${req.body.id}`, (error, results, fields)  => {
+        if(error) throw error;
+        console.log(results[0]);
+        res.json(results[0]);
+    });
+});
+
 
 module.exports = router;

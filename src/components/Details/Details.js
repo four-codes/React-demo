@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 // import Modal from 'react-modal';
 
 
@@ -27,6 +28,10 @@ import React, {Component} from 'react';
         })
     }
 
+
+   /*  edit = (a) =>  {
+      alert(a)
+    } */
     render() {
         return (
         <div className="container"> 
@@ -34,11 +39,13 @@ import React, {Component} from 'react';
                 <table className="table table-hover">
                     <thead>
                         <tr>
-                            <th>NAME</th>
+                            <th>FIRSTNAME</th>
+                            <th>LASTNAME</th>
                             <th>USERNAME</th>
                             <th>CITY</th>
                             <th>STATE</th>
                             <th>CODE</th>
+                            <th>ACTION</th>
                             {/* <th colSpan={2}></th> */}
                         </tr>
                     </thead>
@@ -46,10 +53,18 @@ import React, {Component} from 'react';
                     {this.state.users.map((member, key) => 
                         <tr key={key}>
                         <td>{member.firstname} </td>
+                        <td>{member.lastname} </td>
                         <td>{member.username}</td>
                         <td>{member.city}</td>
                         <td>{member.state}</td>
                         <td>{member.zip}</td>
+                        <td>
+                            <Link to = {`/Edit/${member.id}`}>EDIT</Link>
+                        </td>
+                        
+
+
+                        {/* <td><button onClick={() => this.edit(member.id)}>EDIT</button></td> */}
                         </tr>
                     )}
                     </tbody>
