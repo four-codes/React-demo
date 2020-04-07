@@ -39,10 +39,9 @@ const Edit = (props) => {
 
     useEffect(()=>{
           getUser();
-    },[])
+    }, [])
 
     const onChange = (event) => {
-        // console.log(event.target.name)
         setValues({ ...values, [event.target.name]: event.target.value })
     }
 
@@ -51,7 +50,6 @@ const Edit = (props) => {
     const handleSubmit = async (event) => {
         const form = event.currentTarget;
         console.log(form);
-        // console.log(form.checkValidity())
         if (form.checkValidity() === true) {
             try {
                 fetch("/users/update", {

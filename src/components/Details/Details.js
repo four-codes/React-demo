@@ -39,6 +39,7 @@ import { Link } from 'react-router-dom';
                 <table className="table table-hover">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>FIRSTNAME</th>
                             <th>LASTNAME</th>
                             <th>USERNAME</th>
@@ -52,15 +53,14 @@ import { Link } from 'react-router-dom';
                     <tbody>
                     {this.state.users.map((member, key) => 
                         <tr key={key}>
+                        <td>{member.id} </td>
                         <td>{member.firstname} </td>
                         <td>{member.lastname} </td>
                         <td>{member.username}</td>
                         <td>{member.city}</td>
                         <td>{member.state}</td>
                         <td>{member.zip}</td>
-                        <td>
-                            <Link to = {`/Edit/${member.id}`}>EDIT</Link>
-                        </td>
+                        <td><Link to = {`/Edit/${member.id}`}>EDIT</Link></td>
                         
 
 

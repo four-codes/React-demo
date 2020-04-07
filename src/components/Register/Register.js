@@ -23,16 +23,13 @@ const Register = () => {
     }
     
     const onChange = (event) => {
-        // console.log(event.target.name)
         setValues({ ...values, [event.target.name]: event.target.value })
     }
 
     const [validated, setValidated] = useState(false);
-
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         console.log(form);
-        // console.log(form.checkValidity())
         if (form.checkValidity() === true) {
             fetch("/users/new", {
                 method: 'POST',
@@ -53,11 +50,8 @@ const Register = () => {
             event.preventDefault();
             event.stopPropagation();
         }
-        setValidated(true);
+         setValidated(true);
     };
-
-    // console.log(values);
-
 
     return (
         <Fragment >

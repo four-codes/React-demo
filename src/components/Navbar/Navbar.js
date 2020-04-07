@@ -21,6 +21,7 @@ const Navigation = () => {
                         <Nav.Link to="/Login" as={Link}>Login</Nav.Link>
                         <Nav.Link to="/Register" as={Link}>Register</Nav.Link>
                         <Nav.Link to="/Details" as={Link}>Details</Nav.Link>
+                        <Nav.Link to="/Transaction" as={Link}>Transaction</Nav.Link>
                         {/* <NavDropdown title="Country" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">India</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Australia</NavDropdown.Item>

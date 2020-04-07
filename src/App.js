@@ -13,6 +13,8 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Details from './components/Details/Details';
 import Edit from './components/Edit/Edit';
+import Transaction from './components/Transaction/Transaction';
+
 
 const App = () => {
   return (
@@ -26,6 +28,7 @@ const App = () => {
         <Route  path="/Login" component={Login} />
         <Route  path="/Register" component={Register} />
         <Route  path="/Details" component={Details} />
+        <Route  path="/Transaction" component={Transaction} />
         <Route path="/Edit/:id" render={props => (
           <Edit {...props} />
         )}/>
