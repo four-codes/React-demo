@@ -65,7 +65,6 @@ const Register = () => {
                             required
                             type="text"
                         />
-
                     </Form.Group>
 
                     <Form.Group as={Col} md="4">
