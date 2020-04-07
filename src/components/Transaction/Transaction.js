@@ -31,15 +31,6 @@ class Transaction extends Component {
     //     })
     // }
 
-    onChanged = (event) => {
-        console.log(event.target);
-        // this.setState({
-        //     // total: this.state.total + sum,
-        //     // [event.target.name]: event.target.value
-        // })
-    }
-
-
     onChange = (event) => {
         // const sum = event.target.name * event.target.value;
         this.setState({
@@ -98,10 +89,8 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 2000</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="a"
                                 onChange={this.onChange}
-                                onChange={this.onChanged}
                                 required
                             />
                         </Form.Group>
@@ -110,10 +99,8 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 500</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="b"
                                 onChange={this.onChange}
-                                onChange={this.onChanged}
                                 required
 
 
@@ -124,7 +111,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 200</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 onChange={this.onChange}
                                 name="c"
                                 required
@@ -136,7 +122,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 100</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="d"
                                 onChange={this.onChange}
                                 required
@@ -148,7 +133,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 50</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="e"
                                 onChange={this.onChange}
                                 required
@@ -160,7 +144,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 20</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="f"
                                 onChange={this.onChange}
                                 required
@@ -173,7 +156,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 10</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="g"
                                 onChange={this.onChange}
                                 required
@@ -185,7 +167,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 5</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="h"
                                 onChange={this.onChange}
                                 required
@@ -197,7 +178,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 2</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="i"
                                 onChange={this.onChange}
                                 required
@@ -209,7 +189,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; 1</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="j"
                                 onChange={this.onChange}
                                 required
@@ -224,7 +203,6 @@ class Transaction extends Component {
                             <Form.Label>&#8377; Total</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="0"
                                 name="total"
                                 onChange={this.onChange}
                                 required
