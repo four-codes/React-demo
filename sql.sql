@@ -1,11 +1,13 @@
 CREATE TABLE register (
   id INT(6)(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   firstname VARCHAR(30) NOT NULL,
+  lastname VARCHAR(30) NOT NULL,
   username VARCHAR(30) NOT NULL,
   city VARCHAR(50) NOT NULL,
   state VARCHAR(50) NOT NULL,
   zip VARCHAR(20) NOT NULL
 )
+<<<<<<< HEAD
 
 CREATE TABLE transaction (
   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -32,3 +34,5 @@ CREATE TABLE transaction (
 
 
 11 11 11 11 111
+=======
+>>>>>>> 3e1100741c4dafe1a7ee0c31be94d3151edcc1d8
