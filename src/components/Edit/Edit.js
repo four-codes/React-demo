@@ -24,7 +24,7 @@ const Edit = (props) => {
     }
 
     const getUser = async () => {
-        const res = await fetch(`/users/${props.match.params.id}`);
+        const res = await fetch(`/users/edit/${props.match.params.id}`);
         const data = await res.json();
         setValues({
             id: data.id,

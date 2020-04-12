@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,29 +14,34 @@ import Login from './components/Login/Login';
 import Details from './components/Details/Details';
 import Edit from './components/Edit/Edit';
 import Transaction from './components/Transaction/Transaction';
+import RegisterState from './context/register/RegisterState';
+import Bank from './components/Bank/Bank';
 
 
-const App = () => {
+
+const App = () => { 
   return (
-    <Router>
-            
-    <div className="App">
-    <Container>
-    <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route  path="/Login" component={Login} />
-        <Route  path="/Register" component={Register} />
-        <Route  path="/Details" component={Details} />
-        <Route  path="/Transaction" component={Transaction} />
-        <Route path="/Edit/:id" render={props => (
-          <Edit {...props} />
-        )}/>
-          <Route component={Home} />
-        </Switch>
-    </Container>
-    </div>
-    </Router>
+    <RegisterState>
+      <Router>
+        <div className="App">
+          <Container>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/Login" component={Login} />
+              <Route path="/Register" component={Register} />
+              <Route path="/Details" component={Details} />
+              <Route path="/Transaction" component={Transaction} />
+              <Route path="/Bank" component={Bank} />
+              <Route path="/Edit/:id" render={props => (
+                <Edit {...props} />
+              )} />
+              <Route component={Home} />
+            </Switch>
+          </Container>
+        </div>
+      </Router>
+    </RegisterState>
   );
 }
 

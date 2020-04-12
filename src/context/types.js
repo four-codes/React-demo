@@ -1,0 +1,2 @@
+export const ADD_REGIGTER = 'ADD_REGIGTER';
+export const UPDATE_REGIGTER = 'UPDATE_REGIGTER';

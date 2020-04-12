@@ -1,9 +1,12 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState,useContext } from 'react'
 // import { Form, Button, Row, Col } from 'react-bootstrap'
 import { Form, Col, InputGroup, Button } from 'react-bootstrap';
-
+import RegisterContext from '../../context/register/RegisterContext';
 
 const Register = () => {
+    const registerContext = useContext(RegisterContext);
+    const { addContact } = registerContext;
+    
     const [values, setValues] = useState({
         FirstName: '',
         LastName: '',
@@ -56,6 +59,7 @@ const Register = () => {
     return (
         <Fragment >
             <Form noValidate validated={validated} onSubmit={handleSubmit} >
+            {/* <button onClick={addContact}>Click</button> */}
                 <Form.Row>
                     <Form.Group as={Col} md="4">
                         <Form.Label>First name</Form.Label>
