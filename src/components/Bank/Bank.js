@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Table } from 'react-bootstrap';
 import { Form, Button, Col } from 'react-bootstrap';
+import './Bank.css';
 
 
 
@@ -95,8 +96,6 @@ class Bank extends Component {
 
                             <Form.Group as={Col} md="2" mr="1" >
                                 <Form.Label>&#8377; Amount Type</Form.Label>
-
-
                                 <Form.Control as="select" name="selectCountType" className="col-lg-12" md="2" value={this.state.selectCountType} onChange={this.onChange} >
                                     <option>select</option>
                                     {this.state.counttype.map((member, key) =>
@@ -107,7 +106,7 @@ class Bank extends Component {
 
                             {/* </Form.Row>
                     <Form.Row className="mt-2"> */}
-                            <Form.Group as={Col} md="2" className="mt-5">
+                            <Form.Group as={Col} md="2" className="submitButton">
                                 <Button variant="primary" type="button" onClick={this.transactiondetails} >
                                     {/* <Button variant="primary" type="button" onClick={this.handleSubmit}> */}
                                 Submit
